@@ -8,6 +8,7 @@ import { ReciepsRoute } from "./components/routes/ReciepsRoute";
 import { RecipeDetailsRoute, loader as reciepsLoader } from "./components/routes/RecipeDetailsRoute";
 
 import { MainTemplate } from "./components/layout/MainTemplate";
+import { NotFound } from "./components/routes/NotFound";
 
 export const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
                 path: "/recieps/:id",
                 element: <RecipeDetailsRoute/>,
                 loader: reciepsLoader
+            },
+            {
+                path: '*',
+                element: <NotFound/>
             }
         ]
     },
