@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const MainMenu = () => {
     return (
         <div>
             <Link to="/">Главная</Link>
-            <Link to="/recieps">Рецепты</Link>
+            <NavLink className={({ isActive }) => isActive && `active` } to="/recieps" >Рецепты</NavLink>
             <Link to="/contacts">Контакты</Link>
         </div>
     );

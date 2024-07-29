@@ -31,8 +31,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/recieps/:id",
-                element: <RecipeDetailsRoute/>,
-                loader: reciepsLoader
+                element: <RecipeDetailsRoute/>
             },
             {
                 path: '*',

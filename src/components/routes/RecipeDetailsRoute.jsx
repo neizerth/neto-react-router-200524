@@ -1,5 +1,6 @@
 import {
-    useLoaderData
+    useLoaderData,
+    useParams
 } from "react-router-dom";
 
 import { recieps } from "../../data/recieps";
@@ -13,8 +14,9 @@ export const loader = ({ params }) => {
 }
 
 export const RecipeDetailsRoute = () => {
-    const { id } = useLoaderData();
-    const reciepe = recieps.find(r => r.id === id);
+    const { id } = useParams();
+    // const { id } = params;
+    const reciepe = recieps.find(r => r.id === +id);
 
     return (
         <>
