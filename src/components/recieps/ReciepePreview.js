@@ -2,11 +2,13 @@ import {
     Link
 } from "react-router-dom";
 
+import { reciepeRoute } from "../../config/routes";
+
 export const ReciepePreview = ({ id, name }) => {
     return (
         <div>
             <h3>{name}</h3>
-            <Link to={`/recieps/${id}`}>Посмотреть</Link>
+            <Link to={reciepeRoute(id)}>Посмотреть</Link>
         </div>
     );
 };

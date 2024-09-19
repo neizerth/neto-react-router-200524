@@ -10,31 +10,34 @@ import { RecipeDetailsRoute, loader as reciepsLoader } from "./components/routes
 import { MainTemplate } from "./components/layout/MainTemplate";
 import { NotFound } from "./components/routes/NotFound";
 
+
+import * as R from './config/routes';
+
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <MainTemplate/>,
         children: [
             {
-                path: "/",
+                path: R.HOME_ROUTE,
                 exact: true,
                 element: <HomeRoute/>,
             },
             {
-                path: "/contacts",
+                path: R.CONTACTS_ROUTE,
                 element: <ContactsRoute/>
             },
             {
                 exact: true,
-                path: "/recieps",
+                path: R.RECIEPS_ROUTE,
                 element: <ReciepsRoute/>,
             },
             {
-                path: "/recieps/:id",
+                path: R.RECIEPE_ROUTE,
                 element: <RecipeDetailsRoute/>
             },
             {
-                path: '*',
+                path: R.NOT_FOUND_ROUTE,
                 element: <NotFound/>
             }
         ]
