@@ -13,6 +13,7 @@ export const loader = ({ params }) => {
     }
 }
 
+// /recipes/:id -> /recipes/45 
 export const RecipeDetailsRoute = () => {
     const { id } = useParams();
     // const { id } = params;
