@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router";
 
 import { recieps } from "../../data/recieps";
 import { ReciepeDetails } from "../recieps/ReciepeDetails";
