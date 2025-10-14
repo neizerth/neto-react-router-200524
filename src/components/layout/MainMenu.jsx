@@ -11,7 +11,7 @@ export const MainMenu = () => {
     <div style={style}>
       <Link to={HOME_ROUTE}>Главная</Link>
       <NavLink
-        className={({ isActive }) => isActive && `active`}
+        className={({ isActive }) => isActive ? `active` : ''}
         to={RECIEPS_ROUTE}
       >
         Рецепты
